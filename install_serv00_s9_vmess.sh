@@ -121,7 +121,7 @@ argo_configure() {
           # 读取 ARGO_AUTH 变量
           while [[ -z $ARGO_AUTH ]]; do
             # reading "请输入argo固定隧道密钥（Json或Token）: " ARGO_AUTH
-            ARGO_AUTH="eyJhIjoiOTQ2ZmNiZTVjZGE5YjE4OThjZjEzYjYzZTU3MjQzM2UiLCJ0IjoiZjY4MmFkODYtY2UwZi00NmM4LWIxN2EtYzNjZmY5ZDk3MWMzIiwicyI6IllXSTJNR0kyTTJNdE1EUm1OeTAwWXpBekxUbGtORGd0WWpSaE1tWm1PRE5rWVdNdyJ9"
+            ARGO_AUTH="eyJhIjoiOTQ2ZmNiZTVjZGE5YjE4OThjZjEzYjYzZTU3MjQzM2UiLCJ0IjoiMTliYzFmNTItYTFhNC00ZjgwLTg1NjQtN2ZiNjdlYzM0ZDE0IiwicyI6IlptWm1aVGhpWTJRdE16bGhZeTAwTVdFeExXSXhZak10TmpNNFkyVXlaalkwTkRZNSJ9"
             # ARGO_AUTH=secrets.SERV00_S9_TUNNEL_API
             echo "你的argo固定隧道密钥为: $ARGO_AUTH"
             if [[ -z $ARGO_AUTH ]]; then
