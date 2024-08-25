@@ -103,7 +103,7 @@ reading "\n清理所有进程将退出ssh连接，确定继续清理吗？【y/n
 argo_configure() {
   if [[ -z $ARGO_AUTH || -z $ARGO_DOMAIN ]]; then
       # reading "是否需要使用固定argo隧道？【y/n】: " argo_choice
-      argo_choice="n"
+      argo_choice="y"
       [[ -z $argo_choice ]] && return
       [[ "$argo_choice" != "y" && "$argo_choice" != "Y" && "$argo_choice" != "n" && "$argo_choice" != "N" ]] && { red "无效的选择，请输入y或n"; return; }
       if [[ "$argo_choice" == "y" || "$argo_choice" == "Y" ]]; then
@@ -123,6 +123,7 @@ argo_configure() {
             # reading "请输入argo固定隧道密钥（Json或Token）: " ARGO_AUTH
             # ARGO_AUTH="eyJhIjoiOTQ2ZmNiZTVjZGE5YjE4OThjZjEzYjYzZTU3MjQzM2UiLCJ0IjoiZjY4MmFkODYtY2UwZi00NmM4LWIxN2EtYzNjZmY5ZDk3MWMzIiwicyI6IllXSTJNR0kyTTJNdE1EUm1OeTAwWXpBekxUbGtORGd0WWpSaE1tWm1PRE5rWVdNdyJ9"
             ARGO_AUTH=secrets.SERV00_S9_TUNNEL_API
+            echo "你的argo固定隧道密钥为: $ARGO_AUTH"
             if [[ -z $ARGO_AUTH ]]; then
                 red "ARGO固定隧道密钥不能为空，请重新输入。"
             else
