@@ -67,7 +67,7 @@ choice="y"
         cd $WORKDIR
         # read_nz_variables
         read_vmess_port
-	      argo_configure
+	argo_configure
         generate_config
         download_singbox && wait
         run_sb && sleep 3
