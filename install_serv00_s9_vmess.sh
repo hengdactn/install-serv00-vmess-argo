@@ -60,7 +60,8 @@ install_singbox() {
 echo -e "${yellow}本脚本安装vmess协议${purple}(vmess-ws)${re}"
 echo -e "${yellow}开始运行前，请确保在面板${purple}已开放1个tcp端口${re}"
 echo -e "${yellow}面板${purple}Additional services中的Run your own applications${yellow}已开启为${purplw}Enabled${yellow}状态${re}"
-reading "\n确定继续安装吗？【y/n】: " choice
+# reading "\n确定继续安装吗？【y/n】: " choice
+choice="y"
   case "$choice" in
     [Yy])
         cd $WORKDIR
