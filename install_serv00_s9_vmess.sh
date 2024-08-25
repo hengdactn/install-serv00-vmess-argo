@@ -27,7 +27,7 @@ export ARGO_AUTH=${ARGO_AUTH:-''}
 read_vmess_port() {
     while true; do
         # reading "请输入vmess端口 (面板开放的tcp端口): " vmess_port
-        vmess_port=19640
+        vmess_port=16940
         if [[ "$vmess_port" =~ ^[0-9]+$ ]] && [ "$vmess_port" -ge 1 ] && [ "$vmess_port" -le 65535 ]; then
             green "你的vmess端口为: $vmess_port"
             break
