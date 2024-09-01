@@ -6,7 +6,7 @@ if [ -z "$SERV00_S9_TUNNEL_API" ]; then
 else
     echo "Secret value: $SERV00_S9_TUNNEL_API"
 fi
-if [ -z "$TEST" ]; then
+if [ -z "$UUID" ]; then
     echo "uuid is not set or is empty"
 else
     echo "Secret value: $TEST"
