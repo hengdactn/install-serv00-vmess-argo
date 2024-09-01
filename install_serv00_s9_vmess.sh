@@ -14,11 +14,13 @@ reading() { read -p "$(red "$1")" "$2"; }
 
 USERNAME=$(whoami) # 返回用户名
 HOSTNAME=$(hostname) # 返回主机名
-export UUID=${UUID:-'323f5607-f006-4de1-ad9f-979ebcad7ccf'}  # 设定UUID的初始默认值
+
 export NEZHA_SERVER=${NEZHA_SERVER:-''}
 export NEZHA_PORT=${NEZHA_PORT:-'5555'}
 export NEZHA_KEY=${NEZHA_KEY:-''}
+export vmess_port=${vmess_port:-'16940'}
 export ARGO_DOMAIN=${ARGO_DOMAIN:-'serv00_s9.hengda.us.kg'}
+export UUID=${UUID:-'323f5607-f006-4de1-ad9f-979ebcad7ccf'}  # 设定UUID的初始默认值
 export ARGO_AUTH=${ARGO_AUTH:-'eyJhIjoiOTQ2ZmNiZTVjZGE5YjE4OThjZjEzYjYzZTU3MjQzM2UiLCJ0IjoiMTliYzFmNTItYTFhNC00ZjgwLTg1NjQtN2ZiNjdlYzM0ZDE0IiwicyI6IlptWm1aVGhpWTJRdE16bGhZeTAwTVdFeExXSXhZak10TmpNNFkyVXlaalkwTkRZNSJ9'}
 # export ARGO_AUTH=${ARGO_AUTH:-'$SERV00_S9_TUNNEL_API'}
 
@@ -29,7 +31,7 @@ echo "argo_auth=:$ARGO_AUTH"
 read_vmess_port() {
     while true; do
         # reading "请输入vmess端口 (面板开放的tcp端口): " vmess_port
-        vmess_port=16940
+        # vmess_port=16940
         if [[ "$vmess_port" =~ ^[0-9]+$ ]] && [ "$vmess_port" -ge 1 ] && [ "$vmess_port" -le 65535 ]; then
             green "你的vmess端口为: $vmess_port"
 	    green "argo_auth=:$ARGO_AUTH"
@@ -70,7 +72,7 @@ choice="y"
     [Yy])
         cd $WORKDIR
         # read_nz_variables
-        read_vmess_port
+        # read_vmess_port
 	argo_configure
         generate_config
         download_singbox && wait
