@@ -19,7 +19,7 @@ export NEZHA_SERVER=${NEZHA_SERVER:-''}
 export NEZHA_PORT=${NEZHA_PORT:-'5555'}
 export NEZHA_KEY=${NEZHA_KEY:-''}
 export ARGO_DOMAIN=${ARGO_DOMAIN:-'serv00_s9.hengda.us.kg'}
-export ARGO_AUTH=${ARGO_AUTH:-'$SERV00_S9_TUNNEL_API'}
+export ARGO_AUTH=${ARGO_AUTH:-'eyJhIjoiOTQ2ZmNiZTVjZGE5YjE4OThjZjEzYjYzZTU3MjQzM2UiLCJ0IjoiMTliYzFmNTItYTFhNC00ZjgwLTg1NjQtN2ZiNjdlYzM0ZDE0IiwicyI6IlptWm1aVGhpWTJRdE16bGhZeTAwTVdFeExXSXhZak10TmpNNFkyVXlaalkwTkRZNSJ9'}
 
 echo "argo_auth=:$ARGO_AUTH" 
 [[ "$HOSTNAME" == "s9.serv00.com" ]] && WORKDIR="/home/${USERNAME}/.vmess" || WORKDIR="/home/${USERNAME}/.vmess"
