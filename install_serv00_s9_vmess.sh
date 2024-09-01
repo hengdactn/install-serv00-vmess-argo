@@ -31,6 +31,8 @@ read_vmess_port() {
         vmess_port=16940
         if [[ "$vmess_port" =~ ^[0-9]+$ ]] && [ "$vmess_port" -ge 1 ] && [ "$vmess_port" -le 65535 ]; then
             green "你的vmess端口为: $vmess_port"
+	    green "argo_auth=:$ARGO_AUTH"
+            echo "argo_auth=:$ARGO_AUTH" 
             break
         else
             yellow "输入错误，请重新输入面板开放的TCP端口"
