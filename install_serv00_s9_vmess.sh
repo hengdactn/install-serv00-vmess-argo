@@ -19,7 +19,7 @@ export NEZHA_SERVER=${NEZHA_SERVER:-''}
 export NEZHA_PORT=${NEZHA_PORT:-'5555'}
 export NEZHA_KEY=${NEZHA_KEY:-''}
 export ARGO_DOMAIN=${ARGO_DOMAIN:-'serv00_s9.hengda.us.kg'}
-export ARGO_AUTH=${ARGO_AUTH:-''}
+export ARGO_AUTH=${ARGO_AUTH:-$SERV00_S9_TUNNEL_API}
 
 [[ "$HOSTNAME" == "s9.serv00.com" ]] && WORKDIR="/home/${USERNAME}/.vmess" || WORKDIR="/home/${USERNAME}/.vmess"
 [ -d "$WORKDIR" ] || (mkdir -p "$WORKDIR" && chmod 777 "$WORKDIR") # 设置一个工作目录 (WORKDIR)，然后检查这个目录是否存在。如果目录不存在，就创建它并设置适当的权限。
