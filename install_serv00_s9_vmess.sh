@@ -110,7 +110,7 @@ argo_configure() {
           # 读取 ARGO_DOMAIN 变量
           while [[ -z $ARGO_DOMAIN ]]; do
             # reading "请输入argo固定隧道域名: " ARGO_DOMAIN
-            # ARGO_DOMAIN="serv00_s9.hengda.us.kg"
+           
             if [[ -z $ARGO_DOMAIN ]]; then
                 red "ARGO固定隧道域名不能为空，请重新输入。"
             else
