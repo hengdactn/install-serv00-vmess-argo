@@ -19,7 +19,7 @@ export NEZHA_SERVER=${NEZHA_SERVER:-''}
 export NEZHA_PORT=${NEZHA_PORT:-'5555'}
 export NEZHA_KEY=${NEZHA_KEY:-''}
 export ARGO_DOMAIN=${ARGO_DOMAIN:-'serv00_s9.hengda.us.kg'}
-export ARGO_AUTH=${ARGO_AUTH:-$SERV00_S9_TUNNEL_API}
+export ARGO_AUTH=${ARGO_AUTH:-'$SERV00_S9_TUNNEL_API'}
 
 [[ "$HOSTNAME" == "s9.serv00.com" ]] && WORKDIR="/home/${USERNAME}/.vmess" || WORKDIR="/home/${USERNAME}/.vmess"
 [ -d "$WORKDIR" ] || (mkdir -p "$WORKDIR" && chmod 777 "$WORKDIR") # 设置一个工作目录 (WORKDIR)，然后检查这个目录是否存在。如果目录不存在，就创建它并设置适当的权限。
@@ -121,7 +121,7 @@ argo_configure() {
           # 读取 ARGO_AUTH 变量
           while [[ -z $ARGO_AUTH ]]; do
             # reading "请输入argo固定隧道密钥（Json或Token）: " ARGO_AUTH
-            ARGO_AUTH='eyJhIjoiOTQ2ZmNiZTVjZGE5YjE4OThjZjEzYjYzZTU3MjQzM2UiLCJ0IjoiMTliYzFmNTItYTFhNC00ZjgwLTg1NjQtN2ZiNjdlYzM0ZDE0IiwicyI6IlptWm1aVGhpWTJRdE16bGhZeTAwTVdFeExXSXhZak10TmpNNFkyVXlaalkwTkRZNSJ9'
+            # ARGO_AUTH='eyJhIjoiOTQ2ZmNiZTVjZGE5YjE4OThjZjEzYjYzZTU3MjQzM2UiLCJ0IjoiMTliYzFmNTItYTFhNC00ZjgwLTg1NjQtN2ZiNjdlYzM0ZDE0IiwicyI6IlptWm1aVGhpWTJRdE16bGhZeTAwTVdFeExXSXhZak10TmpNNFkyVXlaalkwTkRZNSJ9'
 	    echo 'argo_auth=:$SERV00_S9_TUNNEL_API'
             # ARGO_AUTH=secrets.SERV00_S9_TUNNEL_API
             echo "你的argo固定隧道密钥为: $ARGO_AUTH"
