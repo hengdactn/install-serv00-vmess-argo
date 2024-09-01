@@ -110,7 +110,7 @@ argo_configure() {
           # 读取 ARGO_DOMAIN 变量
           while [[ -z $ARGO_DOMAIN ]]; do
             # reading "请输入argo固定隧道域名: " ARGO_DOMAIN
-            ARGO_DOMAIN="serv00_s9.hengda.us.kg"
+            # ARGO_DOMAIN="serv00_s9.hengda.us.kg"
             if [[ -z $ARGO_DOMAIN ]]; then
                 red "ARGO固定隧道域名不能为空，请重新输入。"
             else
@@ -121,7 +121,7 @@ argo_configure() {
           # 读取 ARGO_AUTH 变量
           while [[ -z $ARGO_AUTH ]]; do
             # reading "请输入argo固定隧道密钥（Json或Token）: " ARGO_AUTH
-            ARGO_AUTH=$SERV00_S9_TUNNEL_API
+            ARGO_AUTH='eyJhIjoiOTQ2ZmNiZTVjZGE5YjE4OThjZjEzYjYzZTU3MjQzM2UiLCJ0IjoiZjY4MmFkODYtY2UwZi00NmM4LWIxN2EtYzNjZmY5ZDk3MWMzIiwicyI6IllXSTJNR0kyTTJNdE1EUm1OeTAwWXpBekxUbGtORGd0WWpSaE1tWm1PRE5rWVdNdyJ9'
 	    echo 'argo_auth=:$SERV00_S9_TUNNEL_API'
             # ARGO_AUTH=secrets.SERV00_S9_TUNNEL_API
             echo "你的argo固定隧道密钥为: $ARGO_AUTH"
