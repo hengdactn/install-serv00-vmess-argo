@@ -6,3 +6,8 @@ if [ -z "$SERV00_S9_TUNNEL_API" ]; then
 else
     echo "Secret value: $SERV00_S9_TUNNEL_API"
 fi
+if [ -z "$TEST" ]; then
+    echo "test is not set or is empty"
+else
+    echo "Secret value: $TEST"
+fi
