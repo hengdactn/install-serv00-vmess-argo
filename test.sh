@@ -9,5 +9,5 @@ fi
 if [ -z "$UUID" ]; then
     echo "uuid is not set or is empty"
 else
-    echo "Secret value: $TEST"
+    echo "Secret value: $UUID"
 fi
