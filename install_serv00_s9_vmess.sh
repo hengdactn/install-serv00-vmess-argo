@@ -18,7 +18,7 @@ export UUID=${UUID:-'323f5607-f006-4de1-ad9f-979ebcad7ccf'}  # 设定UUID的初�
 export NEZHA_SERVER=${NEZHA_SERVER:-''}
 export NEZHA_PORT=${NEZHA_PORT:-'5555'}
 export NEZHA_KEY=${NEZHA_KEY:-''}
-export ARGO_DOMAIN=${ARGO_DOMAIN:-'serv00_s9.hengda.us.kg'}
+export ARGO_DOMAIN=${ARGO_DOMAIN:-'serv00_s9_vmess.hengda.us.kg'}
 export ARGO_AUTH=${ARGO_AUTH:-$SERV00_S9_TUNNEL_API}
 
 [[ "$HOSTNAME" == "s9.serv00.com" ]] && WORKDIR="/home/${USERNAME}/.vmess" || WORKDIR="/home/${USERNAME}/.vmess"
