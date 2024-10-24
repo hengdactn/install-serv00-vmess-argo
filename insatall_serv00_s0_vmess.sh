@@ -25,7 +25,7 @@ export ARGO_AUTH=${ARGO_AUTH:-'eyJhIjoiOTQ2ZmNiZTVjZGE5YjE4OThjZjEzYjYzZTU3MjQzM
 # export ARGO_AUTH=${ARGO_AUTH:-'$SERV00_S9_TUNNEL_API'}
 
 echo "argo_auth=:$ARGO_AUTH" 
-[[ "$HOSTNAME" == "s9.serv00.com" ]] && WORKDIR="/home/${USERNAME}/.vmess" || WORKDIR="/home/${USERNAME}/.vmess"
+[[ "$HOSTNAME" == "s0.serv00.com" ]] && WORKDIR="/home/${USERNAME}/.vmess" || WORKDIR="/home/${USERNAME}/.vmess"
 [ -d "$WORKDIR" ] || (mkdir -p "$WORKDIR" && chmod 777 "$WORKDIR") # 设置一个工作目录 (WORKDIR)，然后检查这个目录是否存在。如果目录不存在，就创建它并设置适当的权限。
 
 read_vmess_port() {
