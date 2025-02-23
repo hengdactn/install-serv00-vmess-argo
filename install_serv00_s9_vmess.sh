@@ -19,9 +19,9 @@ export NEZHA_SERVER=${NEZHA_SERVER:-''}
 export NEZHA_PORT=${NEZHA_PORT:-'5555'}
 export NEZHA_KEY=${NEZHA_KEY:-''}
 export vmess_port=${vmess_port:-'16940'}
-export ARGO_DOMAIN=${ARGO_DOMAIN:-'serv00_s9.hengda.us.kg'}
+export ARGO_DOMAIN=${ARGO_DOMAIN:-'s9.auto.nyc.mn'}
 export UUID=${UUID:-'323f5607-f006-4de1-ad9f-979ebcad7ccf'}  # 设定UUID的初始默认值
-export ARGO_AUTH=${ARGO_AUTH:-'eyJhIjoiOTQ2ZmNiZTVjZGE5YjE4OThjZjEzYjYzZTU3MjQzM2UiLCJ0IjoiMTliYzFmNTItYTFhNC00ZjgwLTg1NjQtN2ZiNjdlYzM0ZDE0IiwicyI6IlptWm1aVGhpWTJRdE16bGhZeTAwTVdFeExXSXhZak10TmpNNFkyVXlaalkwTkRZNSJ9'}
+export ARGO_AUTH=${ARGO_AUTH:-'eyJhIjoiOTQ2ZmNiZTVjZGE5YjE4OThjZjEzYjYzZTU3MjQzM2UiLCJ0IjoiNDc4M2NiNjUtODFmYi00MjA2LTliYzQtYmQ1NGIyMzJmY2YyIiwicyI6Ik16STRPRGszWWpNdFlqbGxZeTAwTVdVMUxUazNNRGN0TXpJMU1tTmpOVGxtT0RoaCJ9'}
 # export ARGO_AUTH=${ARGO_AUTH:-'$SERV00_S9_TUNNEL_API'}
 
 echo "argo_auth=:$ARGO_AUTH" 
